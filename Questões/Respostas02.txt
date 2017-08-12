@@ -1,20 +1,20 @@
 11/08/2017
-Luiza Carneiro Cez·rio - 150041560
+Luiza Carneiro Cez√°rio - 150041560
 
-Quais as diferenÁas entre os barramentos de dados e de endereÁos?
-O barramento de endereÁos È onde È armazenada a informaÁ„o e o de dados È a transmiss„o de dados entre as unidades.
+Quais as diferen√ßas entre os barramentos de dados e de endere√ßos?
+O barramento de endere√ßos √© onde √© armazenada a informa√ß√£o e o de dados √© a transmiss√£o de dados entre as unidades.
 
-Quais s„o as diferenÁas entre as memÛrias RAM e ROM?
-A RAM È uma memÛria tempor·ria ao encerrar o programa os dados nela ser„o perdidas enquanto a ROM armazena os dados e 
-mesmo que o programa seja encerrado os dados nela n„o ser„o perdidos.
+Quais s√£o as diferen√ßas entre as mem√≥rias RAM e ROM?
+A RAM √© uma mem√≥ria tempor√°ria ao encerrar o programa os dados nela ser√£o perdidas enquanto a ROM armazena os dados e 
+mesmo que o programa seja encerrado os dados nela n√£o ser√£o perdidos.
 
-Considere o cÛdigo abaixo:
+Considere o c√≥digo abaixo:
 
 #include <stdio.h>
 int main(void)
 {
 	int i;
-	printf("Insira um n˙mero inteiro: ");
+	printf("Insira um n√∫mero inteiro: ");
 	scanf("%d", &i);
 	if(i%2)
 		printf("%d eh impar.\n");
@@ -22,11 +22,23 @@ int main(void)
 		printf("%d eh par.\n");
 	return 0;
 }
-Para este cÛdigo, responda: (a) A vari·vel i È armazenada na memÛria RAM ou ROM?
-RAM, porque È um dado tempor·rio. Por quÍ? (b) O programa compilado a partir deste cÛdigo È armazenado na memÛria RAM ou ROM? Por quÍ?
+Para este c√≥digo, responda: 
+(a) A vari√°vel i √© armazenada na mem√≥ria RAM ou ROM? Por qu√™?
+RAM, porque √© um dado tempor√°rio.
+(b) O programa compilado a partir deste c√≥digo √© armazenado na mem√≥ria RAM ou ROM? Por qu√™?
+ROM, porque ele n√£o √© tempor√°rio o c√≥digo escrito √© salvo no computador para poder ser reutilizado depois.
 
-Quais s„o as diferenÁas, vantagens e desvantagens das arquiteturas Harvard e Von Neumann?
+Quais s√£o as diferen√ßas, vantagens e desvantagens das arquiteturas Harvard e Von Neumann?
+Harvard: vantagens - Permite leitura simult√¢nea de dados e do programa, barramento de dados e programa separadamente otimizados; desvantagens - requer instru√ß√µes espec√≠ficas.
+Von Neuman: vantagens - √© mais simples que a de Havard; desvantagens - √© menos eficiente.
 
-Considere a vari·vel inteira i, armazenando o valor 0x8051ABCD. Se i È armazenada na memÛria a partir do endereÁo 0x0200, como ficam este byte e os seguintes, considerando que a memÛria È: (a) Little-endian; (b) Big-endian.
-
-Sabendo que o processador do MSP430 tem registradores de 16 bits, como ele soma duas vari·veis de 32 bits?
+Considere a vari√°vel inteira i, armazenando o valor 0x8051ABCD. Se i √© armazenada na mem√≥ria a partir do endere√ßo 0x0200, como ficam este byte e os seguintes, considerando que a mem√≥ria √©: 
+(a) Little-endian; 
+200 202 204 206
+80  51  AB  CD
+(b) Big-endian.
+200 202 204 206
+CD  AB  51  80
+Sabendo que o processador do MSP430 tem registradores de 16 bits, como ele soma duas vari√°veis de 32 bits?
+Ele separa cada vari√°vel em dois registradores, soma os dois menos significativos, verifica flag que detecta overflow nessa soma e soma 
+os dois registradores mais significativos.
