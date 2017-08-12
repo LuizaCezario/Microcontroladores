@@ -1,0 +1,21 @@
+09/08/2017
+Luiza Carneiro Cezário - 150041560
+
+O que são sistemas embarcados?
+São sistemas computacionais embutidos em microprocessadores que executam apenas uma função específica com tarefas
+específicas e pré-determinadas e executam as mesmas repetidas vezes.
+
+O que são sistemas microprocesssados?
+São circuitos integrados que executam funções de cálculo e tomada de decisão.
+
+Apresente aplicações de sistemas embarcados: 
+(a) para a indústria automotiva: Airbags, portas, janelas, motor, freios e tc.
+(b) para eletrodomésticos: Smart TV, Computador, Teclado.
+(c) para automação industrial: Acionamentos elétricos, robótica industrial, computador de vazão.
+
+Cite arquiteturas possíveis e as diferenças entre elas.
+ACICs: são feitos pra aplicações específicas. FPGAs: contém portaslógicas, flip flops conectados por linguagem de hardware.
+Microcontroladores: Naõ utiliza sistema operacional, usa um software específico para a aplicação.
+
+Por que usamos o MSP430 na disciplina, ao invés de outro microcontrolador?
+Porque é um microprocessador de baixo custo, didático, com baixo consumo energético e utiliza linguagem C e assembly.
