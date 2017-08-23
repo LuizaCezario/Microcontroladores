@@ -34,6 +34,7 @@ add.w R9, R12
 mov.w R12, 4(R9)
 
 (d) A[3] = 3*f - 5*h;
+
 mov.w R4, R11
 add.w R4, R4
 add.w R11, R4
