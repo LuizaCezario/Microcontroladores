@@ -100,14 +100,53 @@ mov.w R13, R15
 Escreva uma sub-rotina na linguagem Assembly do MSP430 que calcula o resto da divisão de a por b, onde a, b e o valor de saída são 
 inteiros de 16 bits. a e b são fornecidos através dos registradores R15 e R14, respectivamente, e a saída deverá ser fornecida através 
 do registrador R15.
+RESTO:
+LOOP:
+cmp R14, R15
+jl EXIT
+sub.w R14, R15
+jump LOOP
+EXIT:
 
 (a) Escreva uma função em C que indica a primalidade de uma variável inteira sem sinal, retornando o valor 1 se o número for primo, e 0,
 caso contrário. Siga o seguinte protótipo:
 
 int Primalidade(unsigned int x);
-
+{
+ for(i =2; i < X; i++)
+  {
+   if (x%i == 0)
+   return 0;
+   }
+  return 1;
+ }
+ 
 (b) Escreva a sub-rotina equivalente na linguagem Assembly do MSP430. A variável de entrada é fornecida pelo registrador R15, e o valor 
 de saída também.
+
+PRIMALIDADE:
+mov.w R15, R14
+sub.w #1, R14
+mov.w #2, R12
+RESTO:
+LOOP:
+cmp R12, R13
+jl END_RESTO
+sub.w R12, R13
+jump LOOP
+END_RESTO:
+cmp R13, #0
+jeq NPRIMO
+cmp R12, R14
+jeq PRIMO
+inc.w R12
+jmp RESTO
+NPRIMO:
+mov.w #0, R15
+jmp Exit
+PRIMO
+mov.w #1, R15
+EXIT:
 
 Escreva uma função em C que calcula o duplo fatorial de n, representado por n!!. Se n for ímpar, n!! = 135*...n, e se n for par, 
 n!! = 246...n. Por exemplo, 9!! = 13579 = 945 e 10!! = 2468*10 = 3840. Além disso, 0!! = 1!! = 1. O protótipo da função é:
